@@ -24,6 +24,12 @@
 - Custom hook from nowPlayingMovies
 - Create movieSlice
 - update store with movie data
+- Main container and Secondary container design
+- Fetch data for Trailer video
+- Update store with Trailer video data - custom hook
+- Embedd the youtube video pplayer with autoplay & mute
+- Tailwind classes (aspect-video) added on main container to create background video.
+- Build secondary component
 
 ## Features
 
