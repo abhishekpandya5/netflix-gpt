@@ -124,7 +124,7 @@ const Login = () => {
         <p className="text-red font-bold py-2">{errorMessage}</p>
         <button
           onClick={handleButtonClick}
-          className="p-2 mx-0 my-4 bg-red rounded-sm w-full"
+          className="p-2 mx-0 my-4 bg-red-color rounded-sm w-full"
         >
           {isSignInForm ? "Sign In" : "Sign up"}
         </button>

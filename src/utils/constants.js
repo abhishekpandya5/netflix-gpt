@@ -4,7 +4,7 @@ export const LOGO =
 export const USER_AVATAR =
   "https://avatars.githubusercontent.com/u/30802411?v=4";
 
-export const options = {
+export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
