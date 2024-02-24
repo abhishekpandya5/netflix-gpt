@@ -30,6 +30,10 @@
 - Embedd the youtube video pplayer with autoplay & mute
 - Tailwind classes (aspect-video) added on main container to create background video.
 - Build secondary component
+- Build Movie List
+- Build Movie card
+- find TMDB image CDN
+- custom hook for different movies category
 
 ## Features
 
