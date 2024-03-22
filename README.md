@@ -34,6 +34,7 @@
 - Build Movie card
 - find TMDB image CDN
 - custom hook for different movies category
+- GPT Search Feature
 
 ## Features
 

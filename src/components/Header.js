@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser, removerUser } from "../utils/userSlice";
 import { LOGO } from "../utils/constants";
+import { toggleGptSearchView } from "../utils/gptSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ const Header = () => {
 
   // get user from store
   const user = useSelector((store) => store.user);
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -45,6 +47,10 @@ const Header = () => {
       });
   };
 
+  const handleGptClick = () => {
+    dispatch(toggleGptSearchView());
+  };
+
   return (
     <header className="flex justify-between items-center w-full absolute px-8 py-2 bg-gradient-to-b from-black z-20 text-white">
       <Link to="/">
@@ -55,6 +61,12 @@ const Header = () => {
         <>
           <h2>Hi, {user.displayName}</h2>
           <div className="flex gap-2">
+            <button
+              onClick={handleGptClick}
+              className="py-2 px-4 mx-4 bg-purple-800 text-white rounded-md"
+            >
+              {!showGptSearch ? "GPT Search" : "Browse Content"}
+            </button>
             <img alt="user-icon" src={user.photoURL} className="w-12 h-12" />
             <button
               onClick={handleSignout}
