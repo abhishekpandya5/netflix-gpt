@@ -9,7 +9,7 @@ import {
 } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { USER_AVATAR } from "../utils/constants";
+import { BG_IMG_URL, DICTIONARY, USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -89,10 +89,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="background absolute">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/b4c7f092-0488-48b7-854d-ca055a84fb4f/5b22968d-b94f-44ec-bea3-45dcf457f29e/IN-en-20231204-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
-          alt="background"
-        />
+        <img src={BG_IMG_URL} alt="background" />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
@@ -126,19 +123,24 @@ const Login = () => {
           onClick={handleButtonClick}
           className="p-2 mx-0 my-4 bg-red-color rounded-sm w-full"
         >
-          {isSignInForm ? "Sign In" : "Sign up"}
+          {isSignInForm ? DICTIONARY.SIGN_IN : DICTIONARY.SIGN_UP}
         </button>
 
         <p onClick={handleSignInToggle}>
           {isSignInForm ? (
             <span>
-              New to Netflix?{" "}
-              <span className="font-bold cursor-pointer">Sign up</span> now
+              {DICTIONARY.NEW_MEMBER_MSG}{" "}
+              <span className="font-bold cursor-pointer">
+                {DICTIONARY.SIGN_UP}
+              </span>{" "}
+              now
             </span>
           ) : (
             <span>
-              Already a member?{" "}
-              <span className="font-bold cursor-pointer">Sign in</span>
+              {DICTIONARY.ALREADY_MEMBER_MSG}{" "}
+              <span className="font-bold cursor-pointer">
+                {DICTIONARY.SIGN_IN}
+              </span>
             </span>
           )}
         </p>

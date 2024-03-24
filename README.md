@@ -34,7 +34,10 @@
 - Build Movie card
 - find TMDB image CDN
 - custom hook for different movies category
-- GPT Search Feature
+- GPT Search Page
+- GPT Search bar
+- Multi language support for GPT search bar component
+-
 
 ## Features
 

@@ -14,3 +14,21 @@ export const API_OPTIONS = {
 };
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
+
+export const BG_IMG_URL =
+  "https://assets.nflxext.com/ffe/siteui/vlv3/b4c7f092-0488-48b7-854d-ca055a84fb4f/5b22968d-b94f-44ec-bea3-45dcf457f29e/IN-en-20231204-popsignuptwoweeks-perspective_alpha_website_medium.jpg";
+
+export const DICTIONARY = {
+  SIGN_IN: "Sign In",
+  SIGN_UP: "Sign Up",
+  NEW_MEMBER_MSG: "New to Netflix?",
+  ALREADY_MEMBER_MSG: "Already a member?",
+  GPT_SEARCH_TEXT: "GPT Search",
+  BROWSE_CONTENT: "Browse Content",
+};
+
+export const SUPPORTED_LANGUAGES = [
+  { identifier: "en", name: "English" },
+  { identifier: "hi", name: "Hindi" },
+  { identifier: "spanish", name: "Spanish" },
+];
